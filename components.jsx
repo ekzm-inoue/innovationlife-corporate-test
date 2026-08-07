@@ -485,7 +485,7 @@ function ILContact() {
           </div>
           <div
             className="il-contact__visual"
-            style={{ backgroundImage: `url(assets/flow_meeting.png)` }}
+            style={{ backgroundImage: `url(${window.ILR('assets/flow_meeting.png')})` }}
           />
         </div>
       </div>
@@ -544,7 +544,7 @@ function ILFooter() {
                 aria-label="YouTube"
                 className="il-footer__social-link"
               >
-                <img src="assets/sns_youtube.png" alt="YouTube" />
+                <img src={window.ILR('assets/sns_youtube.png')} alt="YouTube" />
               </a>
               <a
                 href="https://www.instagram.com/kaguraku.interior/"
@@ -578,7 +578,7 @@ function ILFooter() {
                 aria-label="LINE"
                 className="il-footer__social-link"
               >
-                <img src="assets/sns_line.png" alt="LINE" />
+                <img src={window.ILR('assets/sns_line.png')} alt="LINE" />
               </a>
               <a
                 href="https://www.facebook.com/kaguraku.jp/"
@@ -587,7 +587,7 @@ function ILFooter() {
                 aria-label="Facebook"
                 className="il-footer__social-link"
               >
-                <img src="assets/sns_facebook.png" alt="Facebook" />
+                <img src={window.ILR('assets/sns_facebook.png')} alt="Facebook" />
               </a>
             </div>
           </div>
