@@ -1,5 +1,5 @@
 // ============================================================
-// Innovation Life — SESAME ブランド紹介LP — /kaguraku_4/
+// Innovation Life — SESAME ブランド紹介LP — /kaguraku_c/ (C案)
 // AIインテリア診断を主役に、SESAMEブランド訴求を組み合わせた集客導線。
 // Reuses the corporate design system (.il-k2-* & shared components).
 // ============================================================
@@ -9,13 +9,6 @@ const S_LINE_URL = 'https://lin.ee/5p0dQyV';
 const SESAME = {
   heroImage: 'assets/s_hero_main.jpg',
   heroVariants: [
-    {
-      id: 'B',
-      label: 'B｜課題解決・高コスパ',
-      titleHtml: '狭くても、<br /><em>あきらめない<br />理想のお部屋。</em>',
-      lead: '無料AIインテリア診断実施中。',
-      sub: 'AIがあなたの好みを分析し、コスパ抜群の家具とコーディネートをご提案。LINEでサクッと、あなただけの「正解」が見つかります。',
-    },
     {
       id: 'C',
       label: 'C｜失敗回避・センス不安解消',
@@ -119,7 +112,7 @@ const SESAME = {
       gallery: ['assets/taste_natural.jpg', 'assets/photo_case_wood_living.png', 'assets/kg_gallery1.png', 'assets/item_chair.png'],
       coordinator: { name: '大野 千尋', role: 'インテリアコーディネーター', comment: '木の温かみを主役にしつつ、ラグとクッションで質感を足すのがポイント。ソファはあえて低めを選ぶと、天井が高く感じられてワンルームでも広々と見えます。'},
       feature: '温かみのある木目調家具とファブリックで、やわらかく心地よいリビングをつくるプラン。',
-      items: 'カウチソファ SH8991（グレージュ）／NONIER ローボード/KILIGS センターテーブル',
+      items: 'カウチソファ SH8991（グレージュ）／NONIER ローボード／KILIGS センターテーブル',
     },
     {
       tag: 'ホワイトインテリア',
@@ -170,14 +163,14 @@ function SHero() {
   const variants = SESAME.heroVariants;
   const initial = () => {
     const q = (new URLSearchParams(location.search).get('hero') || '').toUpperCase();
-    const stored = localStorage.getItem('kg4-hero-variant');
-    const id = q || stored || 'B';
+    const stored = localStorage.getItem('kgc-hero-variant');
+    const id = q || stored || 'C';
     const i = variants.findIndex((x) => x.id === id);
     return i < 0 ? 0 : i;
   };
   const [vi, setVi] = React.useState(initial);
   const v = variants[vi];
-  React.useEffect(() => { localStorage.setItem('kg4-hero-variant', v.id); }, [v.id]);
+  React.useEffect(() => { localStorage.setItem('kgc-hero-variant', v.id); }, [v.id]);
   return (
     <section className="il-k2-hero il-s-hero">
       <div className="il-container il-k2-hero__inner">
@@ -204,12 +197,6 @@ function SHero() {
         </div>
         <div className="il-k2-hero__media il-s-hero__media">
           <div className="il-k2-hero__photo" style={{ backgroundImage: `url(${SESAME.heroImage})` }} />
-        </div>
-        <div className="il-s-abtest" role="group" aria-label="キャッチコピー ABCテスト切り替え">
-          <span className="il-s-abtest__label">COPY TEST</span>
-          {variants.map((x, i) => (
-            <button key={x.id} type="button" className={'il-s-abtest__btn' + (i === vi ? ' is-active' : '')} onClick={() => setVi(i)} title={x.label}>{x.id}</button>
-          ))}
         </div>
         <div className="il-s-collab">
           <img className="il-s-collab__logo" src="assets/logo_kaguraku_yoko.png" alt="カグラク" />
@@ -320,7 +307,7 @@ function SAiMain() {
           ))}
         </div>
 
-        <p className="il-k2-inset-note">{SESAME.aiSafe}<br/>{SESAME.aiNote}</p>
+        <p className="il-k2-inset-note">{SESAME.aiSafe}</p>
         <div className="il-k2-cta-row il-k2-cta-row--center">
           <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
             LINEで友だち追加して無料診断をはじめる

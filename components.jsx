@@ -598,7 +598,7 @@ function ILFooter() {
                 <li><a href="builders.html">工務店様・ハウスメーカー様</a></li>
                 <li><a href="furnituremakers.html">家具メーカー様</a></li>
                 <li><a href="minpaku.html">民泊業者様</a></li>
-                <li><a href="https://lp.kaguraku.jp/" target="_blank" rel="noopener noreferrer">個人のお客様（カグラクのご紹介）</a></li>
+                <li><a href="kaguraku.html">個人のお客様（カグラクのご紹介）</a></li>
               </ul>
             </div>
             <div className="il-footer__col">
