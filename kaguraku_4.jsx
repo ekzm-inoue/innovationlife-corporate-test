@@ -10,23 +10,16 @@ const SESAME = {
   heroImage: 'assets/s_hero_main.jpg',
   heroVariants: [
     {
-      id: 'A',
-      label: 'A｜情緒・世界観',
-      titleHtml: '<em>“私らしい部屋”</em>の<br />答えが見つかる。',
-      lead: '無料AIインテリア診断実施中。',
-      sub: '狭くても、予算が限られていても大丈夫。あなたにぴったりのインテリアスタイルと家具を提案します。',
-    },
-    {
       id: 'B',
       label: 'B｜課題解決・高コスパ',
-      titleHtml: '狭くても、<br /><em>あきらめない理想の<br />おしゃれ部屋。</em>',
+      titleHtml: '狭くても、<br /><em>あきらめない<br />理想のお部屋。</em>',
       lead: '無料AIインテリア診断実施中。',
       sub: 'AIがあなたの好みを分析し、コスパ抜群の家具とコーディネートをご提案。LINEでサクッと、あなただけの「正解」が見つかります。',
     },
     {
       id: 'C',
       label: 'C｜失敗回避・センス不安解消',
-      titleHtml: 'センス不要。<br /><em>AIとつくる、失敗しない部屋づくり。</em>',
+      titleHtml: 'AIとつくる、<br /><em>失敗しない部屋づくり。</em>',
       lead: '無料AIインテリア診断実施中。',
       sub: '「センスに自信がない」「家具選びで失敗したくない」そんな悩みをAIが解決。あなたにぴったりのスタイルと家具をご提案します。',
     },
@@ -126,7 +119,7 @@ const SESAME = {
       gallery: ['assets/taste_natural.jpg', 'assets/photo_case_wood_living.png', 'assets/kg_gallery1.png', 'assets/item_chair.png'],
       coordinator: { name: '大野 千尋', role: 'インテリアコーディネーター', comment: '木の温かみを主役にしつつ、ラグとクッションで質感を足すのがポイント。ソファはあえて低めを選ぶと、天井が高く感じられてワンルームでも広々と見えます。'},
       feature: '温かみのある木目調家具とファブリックで、やわらかく心地よいリビングをつくるプラン。',
-      items: 'カウチソファ SH8991（グレージュ）／NONIER ローボード／KILIGS センターテーブル',
+      items: 'カウチソファ SH8991（グレージュ）／NONIER ローボード/KILIGS センターテーブル',
     },
     {
       tag: 'ホワイトインテリア',
@@ -155,8 +148,16 @@ const SESAME = {
 
   // ⑧ お客様の声
   voices: [
-    { q: '組み立てもいらない。最高です', b: '座面の広さと高さ、背もたれの程良い湾曲、硬めなクッション性、どれを取っても満足のいくソファです。お値段も手頃で組み立てもいらない。最高です。', who: '愛知県 / 50代 / KUFUL 1Pソファご購入' },
-    { q: '生活感が消えて友達を呼びたくなりました', b: '隠す収納と見せる収納のバランスがよく、6畳のお部屋でも圧迫感なく置けました。お部屋がすっきりしてお友達を招くのが楽しみに！', who: '20代 / 一人暮らし' },
+    { stars: 5, q: '他にはないデザイン、痛いところに手が届く設計', b: 'とても可愛い家具が買えました。他にはないデザイン、痛いところに手が届く設計、理想的な家具でした！対応も早く、傷もありませんでした。また機会があれば利用したいです。', who: 'mamanoakijikanさん / 2026.03.01' },
+    { stars: 5, q: 'キッチンとうまく調和してくれてよかったです', b: 'ホワイトの色味がどうかなと思ったのですけど、いい意味で明る過ぎず、キッチンとうまく調和してくれてよかったです！1人で組み立てるのは少し大変でした。', who: '購入者さん / 2026.04.04' },
+    { stars: 4, q: '棚の質感と出来栄えが、思ったよりよかった', b: '色合いが思い通りの良い色合いで、棚の質感と出来栄えが、思ったよりよかったからお気に入りです。', who: 'ホワイトNさん / 2026.06.05' },
+    { stars: 5, q: '良い色で、部屋に馴染んでいます', b: 'オフホワイトを注文しました。良い色で、部屋に馴染んでいます。座り心地も良い感じです。注文してすぐに届いたので良かったです！！', who: '購入者さん / 2026.03.07' },
+    { stars: 4, q: 'アーチ型の扉がとってもかわいいです', b: 'リビングに棚が欲しくて購入しました。アーチ型の扉がとってもかわいいです。', who: 'ゆき111さん / 2026.06.12' },
+    { stars: 4, q: 'シンプルで使いやすそうです', b: '気に入りました。レンジとピッタリな雰囲気でシンプルで使いやすそうです。またsesamiシリーズチェックして行きたいと思います。良いお品をありがとうございました', who: '購入者さん / 2026.05.07' },
+    { stars: 4, q: 'おもちゃ感があるけど、安っぽくなくて良いです', b: 'とてもかわいいです。おもちゃ感があるけど、安っぽくなくて良いです。電池つきだと◎', who: 'ニノ8577さん / 2026.07.27' },
+    { stars: 5, q: 'お部屋が明るくきれいになりました', b: '組み立ては時間はかかりましたが、不器用な私でも1人で説明書が分かりやすかったので出来ました。とても可愛く、お部屋が明るくきれいになりました。ありがとうございました。', who: 'さおりん9510さん / 2026.03.29' },
+    { stars: 5, q: 'めちゃくちゃ可愛いです。色味もとても良かったです', b: 'めちゃくちゃ可愛いです。色味もとても良かったです！組み立てが大変そうだったので完成品を購入しましたが取っ手を付けるだけだったので本当に良かったです！', who: '購入者さん / 2026.04.28' },
+    { stars: 5, q: 'とってもおしゃれで大満足です', b: '作るのは大人2人がかりで、大変でしたが、とってもおしゃれで大満足です。配送も届くのが早く、引っ越しで家を整える期間を短くしたかったので助かりました', who: 'れれれれれのおじさんさん / 2026.06.29' },
   ],
 
   // ⑨ クロージング
@@ -170,7 +171,7 @@ function SHero() {
   const initial = () => {
     const q = (new URLSearchParams(location.search).get('hero') || '').toUpperCase();
     const stored = localStorage.getItem('kg4-hero-variant');
-    const id = q || stored || 'A';
+    const id = q || stored || 'B';
     const i = variants.findIndex((x) => x.id === id);
     return i < 0 ? 0 : i;
   };
@@ -193,14 +194,7 @@ function SHero() {
             <span className="il-s-collab__x">×</span>
             <img className="il-s-collab__logo il-s-collab__logo--sesame" src="assets/logo_sesame.png" alt="SESAME" />
           </div>
-          <ul className="il-s-badges">
-            {SESAME.heroBadges.map((b, i) => <li key={i}>{b}</li>)}
-          </ul>
           <div className="il-k2-cta-row">
-            <a className="il-btn il-btn--ghost il-btn--lg" href="#coordinate">
-              コーディネート事例を見る
-              <span className="il-arrow"></span>
-            </a>
             <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
               LINEで友だち追加して無料診断をはじめる
               <span className="il-k2-btn-note">無料・約10分</span>
@@ -217,6 +211,11 @@ function SHero() {
             <button key={x.id} type="button" className={'il-s-abtest__btn' + (i === vi ? ' is-active' : '')} onClick={() => setVi(i)} title={x.label}>{x.id}</button>
           ))}
         </div>
+        <div className="il-s-collab">
+          <img className="il-s-collab__logo" src="assets/logo_kaguraku_yoko.png" alt="カグラク" />
+          <span className="il-s-collab__x">×</span>
+          <img className="il-s-collab__logo il-s-collab__logo--sesame" src="assets/logo_sesame.png" alt="SESAME" />
+        </div>
       </div>
     </section>
   );
@@ -232,6 +231,9 @@ function SIntro() {
           <p className="il-eyebrow" style={{ justifyContent: 'center' }}>{d.eyebrow}</p>
           <h2 className="il-h-section" dangerouslySetInnerHTML={{ __html: 'はじめまして、<em>SESAME</em>です' }} />
           <p className="il-section-lede il-section-lede--center" dangerouslySetInnerHTML={{ __html: d.title }} />
+          <ul className="il-s-badges il-s-badges--row">
+            {SESAME.heroBadges.map((b, i) => <li key={i}>{b}</li>)}
+          </ul>
         </div>
         <div className="il-s-intro">
           <div className="il-s-intro__body">
@@ -356,7 +358,7 @@ function SReasons() {
       <div className="il-container">
         <div className="il-section-head il-section-head--center">
           <p className="il-eyebrow" style={{ justifyContent: 'center' }}>WHY SESAME</p>
-          <h2 className="il-h-section">SESAMEが選ばれる<em>4つの理由</em></h2>
+          <h2 className="il-h-section">SESAMEの家具が選ばれる<em>4つの理由</em></h2>
         </div>
         <div className="il-s-reasons">
           {SESAME.reasons.map((r, i) => (
@@ -399,10 +401,12 @@ function SPackages() {
               <div className="il-s-pack__body">
                 <h3 className="il-s-pack__tag">{pk.tag}</h3>
                 <p className="il-s-pack__feature">{pk.feature}</p>
+                {false && (
                 <button type="button" className="il-btn il-btn--ghost il-s-pack__cta" onClick={() => setOpen(i)}>
                   コーディネート例を見る
                   <span className="il-arrow"></span>
                 </button>
+                )}
               </div>
             </article>
           ))}
@@ -463,28 +467,67 @@ function SSeries() {
 
 // ---------- ⑧ Voices ----------
 function SVoices() {
+  const ref = React.useRef(null);
+  const [i, setI] = React.useState(0);
+  const n = SESAME.voices.length;
+  const [per, setPer] = React.useState(3);
+  React.useEffect(() => {
+    const calc = () => { const w = window.innerWidth; setPer(w >= 1040 ? 3 : w >= 700 ? 2 : 1); };
+    calc();
+    window.addEventListener('resize', calc);
+    return () => window.removeEventListener('resize', calc);
+  }, []);
+  const max = Math.max(0, n - per);
+  const go = (dir) => {
+    const el = ref.current;
+    if (!el) return;
+    const card = el.querySelector('.il-s-voice');
+    if (!card) return;
+    const step = card.offsetWidth + 20;
+    const next = Math.min(max, Math.max(0, i + dir));
+    setI(next);
+    const from = el.scrollLeft;
+    const to = next * step;
+    const t0 = performance.now();
+    const dur = 360;
+    const tick = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.scrollLeft = from + (to - from) * e;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
   return (
     <section className="il-section il-section--paper">
       <div className="il-container">
         <div className="il-section-head il-section-head--center">
           <p className="il-eyebrow" style={{ justifyContent: 'center' }}>CUSTOMER VOICE</p>
           <h2 className="il-h-section">お客様の声</h2>
+          <p className="il-s-voices__source">楽天市場「SESAME（セサミ）家具・インテリア」ショップレビューより（★4.73 / 4,486件）</p>
         </div>
-        <div className="il-s-voices">
-          {SESAME.voices.map((v, i) => (
-            <figure key={i} className="il-s-voice">
-              <blockquote className="il-s-voice__q">「{v.q}」</blockquote>
-              <p className="il-s-voice__b">{v.b}</p>
-              <figcaption className="il-s-voice__who">{v.who}</figcaption>
-            </figure>
-          ))}
+        <div className="il-s-voices-wrap">
+          <div className="il-s-voices il-s-voices--carousel" ref={ref}>
+            {SESAME.voices.map((v, k) => (
+              <figure key={k} className="il-s-voice">
+                <p className="il-s-voice__stars" aria-label={'評価' + v.stars}>{'★'.repeat(v.stars)}<span>{'★'.repeat(5 - v.stars)}</span></p>
+                <blockquote className="il-s-voice__q">「{v.q}」</blockquote>
+                <p className="il-s-voice__b">{v.b}</p>
+                <figcaption className="il-s-voice__who">{v.who}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="il-s-voices__nav">
+            <button type="button" className="il-s-voices__arrow" aria-label="前へ" onClick={() => go(-1)} disabled={i === 0}>←</button>
+            <span className="il-s-voices__count">{i + 1}–{Math.min(n, i + per)} / {n}</span>
+            <button type="button" className="il-s-voices__arrow" aria-label="次へ" onClick={() => go(1)} disabled={i >= max}>→</button>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-// ---------- ⑨ Closing ----------
 function SClosing() {
   return (
     <section className="il-k2-final">
