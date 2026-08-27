@@ -320,7 +320,7 @@ function SAiMain() {
           ))}
         </div>
 
-        <p className="il-k2-inset-note">{SESAME.aiSafe}</p>
+        <p className="il-k2-inset-note">{SESAME.aiSafe}<br/>{SESAME.aiNote}</p>
         <div className="il-k2-cta-row il-k2-cta-row--center">
           <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
             LINEで友だち追加して無料診断をはじめる
