@@ -1,7 +1,6 @@
 // ============================================================
-// Innovation Life — SESAME ブランド紹介LP — /kaguraku_c/ (C案)
-// AIインテリア診断を主役に、SESAMEブランド訴求を組み合わせた集客導線。
-// Reuses the corporate design system (.il-k2-* & shared components).
+// Innovation Life — SESAME ブランド紹介LP（C案 / kaguraku_c.html）
+// 広告からのランディング用。ヒーローコピーは C バリアント固定。
 // ============================================================
 
 const S_LINE_URL = 'https://lin.ee/5p0dQyV';
@@ -160,17 +159,7 @@ const SESAME = {
 
 // ---------- ① Hero ----------
 function SHero() {
-  const variants = SESAME.heroVariants;
-  const initial = () => {
-    const q = (new URLSearchParams(location.search).get('hero') || '').toUpperCase();
-    const stored = localStorage.getItem('kgc-hero-variant');
-    const id = q || stored || 'C';
-    const i = variants.findIndex((x) => x.id === id);
-    return i < 0 ? 0 : i;
-  };
-  const [vi, setVi] = React.useState(initial);
-  const v = variants[vi];
-  React.useEffect(() => { localStorage.setItem('kgc-hero-variant', v.id); }, [v.id]);
+  const v = SESAME.heroVariants[0];
   return (
     <section className="il-k2-hero il-s-hero">
       <div className="il-container il-k2-hero__inner">
@@ -307,7 +296,7 @@ function SAiMain() {
           ))}
         </div>
 
-        <p className="il-k2-inset-note">{SESAME.aiSafe}</p>
+        <p className="il-k2-inset-note">{SESAME.aiSafe}<br/>{SESAME.aiNote}</p>
         <div className="il-k2-cta-row il-k2-cta-row--center">
           <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
             LINEで友だち追加して無料診断をはじめる

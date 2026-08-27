@@ -16,13 +16,6 @@ const SESAME = {
       lead: '無料AIインテリア診断実施中。',
       sub: 'AIがあなたの好みを分析し、コスパ抜群の家具とコーディネートをご提案。LINEでサクッと、あなただけの「正解」が見つかります。',
     },
-    {
-      id: 'C',
-      label: 'C｜失敗回避・センス不安解消',
-      titleHtml: 'AIとつくる、<br /><em>失敗しない部屋づくり。</em>',
-      lead: '無料AIインテリア診断実施中。',
-      sub: '「センスに自信がない」「家具選びで失敗したくない」そんな悩みをAIが解決。あなたにぴったりのスタイルと家具をご提案します。',
-    },
   ],
   heroBadges: [
     'カグラクと同じ4FULグループの家具ブランド',
@@ -167,17 +160,7 @@ const SESAME = {
 
 // ---------- ① Hero ----------
 function SHero() {
-  const variants = SESAME.heroVariants;
-  const initial = () => {
-    const q = (new URLSearchParams(location.search).get('hero') || '').toUpperCase();
-    const stored = localStorage.getItem('kg4-hero-variant');
-    const id = q || stored || 'B';
-    const i = variants.findIndex((x) => x.id === id);
-    return i < 0 ? 0 : i;
-  };
-  const [vi, setVi] = React.useState(initial);
-  const v = variants[vi];
-  React.useEffect(() => { localStorage.setItem('kg4-hero-variant', v.id); }, [v.id]);
+  const v = SESAME.heroVariants[0];
   return (
     <section className="il-k2-hero il-s-hero">
       <div className="il-container il-k2-hero__inner">
@@ -204,12 +187,6 @@ function SHero() {
         </div>
         <div className="il-k2-hero__media il-s-hero__media">
           <div className="il-k2-hero__photo" style={{ backgroundImage: `url(${SESAME.heroImage})` }} />
-        </div>
-        <div className="il-s-abtest" role="group" aria-label="キャッチコピー ABCテスト切り替え">
-          <span className="il-s-abtest__label">COPY TEST</span>
-          {variants.map((x, i) => (
-            <button key={x.id} type="button" className={'il-s-abtest__btn' + (i === vi ? ' is-active' : '')} onClick={() => setVi(i)} title={x.label}>{x.id}</button>
-          ))}
         </div>
         <div className="il-s-collab">
           <img className="il-s-collab__logo" src="assets/logo_kaguraku_yoko.png" alt="カグラク" />
