@@ -480,7 +480,7 @@ function SVoices() {
         <div className="il-section-head il-section-head--center">
           <p className="il-eyebrow" style={{ justifyContent: 'center' }}>CUSTOMER VOICE</p>
           <h2 className="il-h-section">お客様の声</h2>
-          <p className="il-s-voices__source">楽天市場「SESAME（セサミ）家具・インテリア」ショップレビューより（★4.73 / 4,486件）</p>
+          <p className="il-s-voices__source">楽天市場「SESAME（セサミ）家具・インテリア」ショップレビューより（★4.73 / 総数4,486件）<br />※2026年8月21日時点</p>
         </div>
         <div className="il-s-voices-wrap">
           <div className="il-s-voices il-s-voices--carousel" ref={ref}>
