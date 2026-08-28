@@ -96,7 +96,7 @@ const SESAME = {
     { t: 'スペパ（スペースパフォーマンス）抜群', b: '奥行きを抑えた設計や隙間収納。縦ラインを活用する突っ張り壁面収納で、狭い部屋も広々使えます。', img: 'assets/item_shelf.png' },
     { t: 'トレンドを押さえたテイスト＆カラー', b: '白やアイボリーをベースにした韓国風・北欧ナチュラル・ホワイトインテリアの家具アイテムを多く取り揃えています。ラタン調やアーチ型デザインも豊富です。', img: 'assets/kg_gallery3.png' },
     { t: 'デザイン性と実用性を兼ねた家具アイテム', b: '「見せる収納」と「隠す収納」を両立した多機能設計。デザイン性と実用性を兼ね備えたアイテムを多数取り揃えております。', img: 'assets/item_tv_board.png' },
-    { t: '憧れのデザインのラグをお手頃価格で。', b: 'サヤンサヤンは、世界の産地から直輸入で販売しているので、ペルシャ柄もベニワレンも、憧れのデザインがお手頃な価格でご提供しております。', img: 'assets/item_rug.png' },
+    { t: '憧れのデザインのラグをお手頃価格で', b: 'サヤンサヤンは、世界の産地から直輸入で販売しているので、ペルシャ柄もベニワレンも、憧れのデザインがお手頃な価格でご提供しております。', img: 'assets/item_rug.png' },
   ],
 
   // ⑦ カグラク×SESAME トータルコーディネート（5テイスト）
@@ -534,10 +534,6 @@ function SClosing() {
           <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
             LINEで友だち追加して無料診断をはじめる
             <span className="il-k2-btn-note">無料・約10分</span>
-          </a>
-          <a className="il-btn il-btn--ghost-inv il-btn--lg" href="#series">
-            カテゴリーから家具を探す
-            <span className="il-arrow"></span>
           </a>
         </div>
       </div>
