@@ -22,23 +22,34 @@ const SESAME = {
     '楽天ランキング上位常連ブランド',
   ],
 
-  // ② はじめまして、SESAMEです
+  // ② はじめまして、4FULグループです
   intro: {
-    eyebrow: 'ABOUT SESAME',
-    title: '「ワンルームの一人暮らしでも、羨ましがられるお部屋づくり」が<em>コンセプト</em>です。',
-    body: [
-      'SESAME（セサミ）は、「カグラク」と同じ 4FULグループ が手がける、オリジナル家具ブランドです。',
-      '創業1918年の歴史をもつ4FULグループ（広島・尾道／旧 佐藤産業株式会社）が、自社工場でつくるオリジナル家具をお届けしています。',
-      'SESAMEの最大の特徴は、限られた空間を有効活用する「スペースパフォーマンス（スペパ）」設計。',
-      '「ワンルームの一人暮らしでも、羨ましがられるお部屋づくり」がコンセプトです。',
-      '狭いお部屋ならではの収納不足や配置の悩みを解決。ノウハウを活かし、高品質でデザイン性に優れた家具をリーズナブルにお届けしています。',
-      'そんなSESAMEとカグラクのタッグで、あなたの“理想の部屋づくり”をサポートします。',
+    eyebrow: 'ABOUT 4FUL GROUP',
+    title: '「住空間」×「ライフスタイル」=「住ライフスタイル創造企業」が、<em>4FULグループのコンセプト</em>です。',
+    brands: [
+      {
+        name: 'SESAME（セサミ）',
+        body: [
+          '「カグラク」と同じ4FULグループが手がける、オリジナル家具ブランドです。',
+          '北欧風、韓国風、ホワイトインテリア——好きなテイストから選べるラインナップで、一人暮らしの賃貸ワンルームでも「羨ましい」と言われるお部屋づくりをご提案します。キッチン収納から収納家具、テレビ台、ソファ、ベッド、こたつまで。オリジナルシリーズも豊富に取り揃えています。',
+          '最大の特徴は、限られた空間を有効活用する「スペースパフォーマンス（スペパ）」設計。',
+          '「ワンルームの一人暮らしでも、羨ましがられるお部屋づくり」がコンセプトです。狭いお部屋ならではの収納不足や配置の悩みを解決し、高品質でデザイン性に優れた家具をリーズナブルにお届けしています。',
+        ],
+      },
+      {
+        name: 'サヤンサヤン',
+        body: [
+          '同じく4FULグループの、絨毯・ラグのブランドです。',
+          'ベルギー、トルコ、イラン、中国、インドをはじめとする世界各地の産地より、品質とデザインにこだわった敷物を直接買い付けております。実店舗を持たないインターネット販売を軸とし、流通の中間工程と過剰な包装を省くことで、輸入直販ならではの価格を実現してまいりました。',
+          '取り扱う商品は、ベルギー製ウィルトン織り・モケット織りをはじめ、ゴブラン織り、手織りのインドキリムやギャッベなど多岐にわたります。玄関マットから6帖サイズのカーペット、円形ラグ、キッチンマット、廊下敷きまで、あらゆる住まいの空間にお応えできる品揃えを整えております。',
+        ],
+      },
     ],
     relation: [
       { k: '4FUL GROUP', v: '広島県尾道市に本社を置く大正7年（1918年）創業の老舗家具・インテリア企画開発・卸売企業です。2024年6月1日に「佐藤産業株式会社」から社名を変更しました。', url: 'https://4ful.co.jp/' },
       { k: 'カグラク', v: 'インテリアコーディネートの提案から、家具の購入、納品・設置までワンストップでご提供しております。' },
-      { k: 'SESAME', v: '「ワンルームの一人暮らしでも、羨ましがられるお部屋づくり」をコンセプトに、小さいお部屋ならではのお悩みを解決する、インテリアの通販サイトです。', url: 'https://www.sesame-kagu.jp/' },
-      { k: 'サヤンサヤン', v: '世界各地の絨毯やラグ、カーペットを直輸入し販売しています。', url: 'https://sayansayan.co.jp/' },
+      { k: 'SESAME', url: 'https://www.sesame-kagu.jp/' },
+      { k: 'サヤンサヤン', url: 'https://sayansayan.co.jp/' },
     ],
   },
 
@@ -81,10 +92,10 @@ const SESAME = {
 
   // ⑥ 選ばれる4つの理由
   reasons: [
-    { t: 'スペパ（スペースパフォーマンス）抜群', b: '奥行きを抑えた設計や隙間収納（15/20/25cm）、縦ラインを活用する突っ張り壁面収納で、狭い部屋も広々使えます。', img: 'assets/item_shelf.png' },
-    { t: 'トレンドを押さえたテイスト＆カラー', b: '白やアイボリーをベースにした韓国風・北欧ナチュラル・ホワイトインテリア。ラタン調やアーチ型デザインも豊富です。', img: 'assets/kg_gallery3.png' },
-    { t: 'デザイン性と実用性を兼ねた高コスパ', b: '「見せる収納」と「隠す収納」を両立した多機能設計で、生活感をスマートにオフします。', img: 'assets/item_tv_board.png' },
-    { t: '初めての一人暮らしでも安心のサポート', b: '搬入しやすい「圧縮梱包ソファ」や届いてすぐ使える「完成品家具」を展開。組み立て資料・動画も充実しています。', img: 'assets/item_chair.png' },
+    { t: 'スペパ（スペースパフォーマンス）抜群', b: '奥行きを抑えた設計や隙間収納。縦ラインを活用する突っ張り壁面収納で、狭い部屋も広々使えます。', img: 'assets/item_shelf.png' },
+    { t: 'トレンドを押さえたテイスト＆カラー', b: '白やアイボリーをベースにした韓国風・北欧ナチュラル・ホワイトインテリアの家具アイテムを多く取り揃えています。ラタン調やアーチ型デザインも豊富です。', img: 'assets/kg_gallery3.png' },
+    { t: 'デザイン性と実用性を兼ねた家具アイテム', b: '「見せる収納」と「隠す収納」を両立した多機能設計。デザイン性と実用性を兼ね備えたアイテムを多数取り揃えております。', img: 'assets/item_tv_board.png' },
+    { t: '憧れのデザインのラグをお手頃価格で。', b: 'サヤンサヤンは、世界の産地から直輸入で販売しているので、ペルシャ柄もベニワレンも、憧れのデザインがお手頃な価格でご提供しております。', img: 'assets/item_rug.png' },
   ],
 
   // ⑦ カグラク×SESAME トータルコーディネート（5テイスト）
@@ -140,16 +151,21 @@ const SESAME = {
 
   // ⑧ お客様の声
   voices: [
-    { stars: 5, q: '他にはないデザイン、痛いところに手が届く設計', b: 'とても可愛い家具が買えました。他にはないデザイン、痛いところに手が届く設計、理想的な家具でした！対応も早く、傷もありませんでした。また機会があれば利用したいです。', who: 'mamanoakijikanさん / 2026.03.01' },
-    { stars: 5, q: 'キッチンとうまく調和してくれてよかったです', b: 'ホワイトの色味がどうかなと思ったのですけど、いい意味で明る過ぎず、キッチンとうまく調和してくれてよかったです！1人で組み立てるのは少し大変でした。', who: '購入者さん / 2026.04.04' },
-    { stars: 4, q: '棚の質感と出来栄えが、思ったよりよかった', b: '色合いが思い通りの良い色合いで、棚の質感と出来栄えが、思ったよりよかったからお気に入りです。', who: 'ホワイトNさん / 2026.06.05' },
-    { stars: 5, q: '良い色で、部屋に馴染んでいます', b: 'オフホワイトを注文しました。良い色で、部屋に馴染んでいます。座り心地も良い感じです。注文してすぐに届いたので良かったです！！', who: '購入者さん / 2026.03.07' },
     { stars: 4, q: 'アーチ型の扉がとってもかわいいです', b: 'リビングに棚が欲しくて購入しました。アーチ型の扉がとってもかわいいです。', who: 'ゆき111さん / 2026.06.12' },
     { stars: 4, q: 'シンプルで使いやすそうです', b: '気に入りました。レンジとピッタリな雰囲気でシンプルで使いやすそうです。またsesamiシリーズチェックして行きたいと思います。良いお品をありがとうございました', who: '購入者さん / 2026.05.07' },
-    { stars: 4, q: 'おもちゃ感があるけど、安っぽくなくて良いです', b: 'とてもかわいいです。おもちゃ感があるけど、安っぽくなくて良いです。電池つきだと◎', who: 'ニノ8577さん / 2026.07.27' },
+    { stars: 5, q: 'ラグが変わるだけでこんなに部屋の雰囲気が変わり、気持ちが上がるなんて', b: 'ご連絡通りの日時に到着しました。臭いもなく、シワもなく、美しい状態で受け取ることができました。ラグが変わるだけでこんなに部屋の雰囲気が変わり、気持ちが上がるなんて、思いませんでした。素敵なラグをリーズナブルに提供してくださりありがとうございます。', who: 'koo4303さん / 女性・40代 / 2026.08.18' },
     { stars: 5, q: 'お部屋が明るくきれいになりました', b: '組み立ては時間はかかりましたが、不器用な私でも1人で説明書が分かりやすかったので出来ました。とても可愛く、お部屋が明るくきれいになりました。ありがとうございました。', who: 'さおりん9510さん / 2026.03.29' },
-    { stars: 5, q: 'めちゃくちゃ可愛いです。色味もとても良かったです', b: 'めちゃくちゃ可愛いです。色味もとても良かったです！組み立てが大変そうだったので完成品を購入しましたが取っ手を付けるだけだったので本当に良かったです！', who: '購入者さん / 2026.04.28' },
     { stars: 5, q: 'とってもおしゃれで大満足です', b: '作るのは大人2人がかりで、大変でしたが、とってもおしゃれで大満足です。配送も届くのが早く、引っ越しで家を整える期間を短くしたかったので助かりました', who: 'れれれれれのおじさんさん / 2026.06.29' },
+    { stars: 5, q: '肌触りも良く落ち着いた色合いでとても気に入りました！', b: '肌触りも良く落ち着いた色合いでとても気に入りました！厚さもちょうどいいです。', who: '購入者さん / 2026.07.26' },
+    { stars: 5, q: 'キッチンとうまく調和してくれてよかったです', b: 'ホワイトの色味がどうかなと思ったのですけど、いい意味で明る過ぎず、キッチンとうまく調和してくれてよかったです！1人で組み立てるのは少し大変でした。', who: '購入者さん / 2026.04.04' },
+    { stars: 5, q: 'とても満足のいく絨毯に出会えました', b: '豊富な柄やサイズの中から自分の好みに合うものを選ぶことができ、とても満足のいく絨毯に出会えました。', who: 'e4e0413さん / 女性・40代 / 2026.07.26' },
+    { stars: 4, q: '棚の質感と出来栄えが、思ったよりよかった', b: '色合いが思い通りの良い色合いで、棚の質感と出来栄えが、思ったよりよかったからお気に入りです。', who: 'ホワイトNさん / 2026.06.05' },
+    { stars: 5, q: '6畳のお部屋に200sizeを購入しましたがバッチリ', b: 'アイボリー購入　思った異常に　厚みもあり大満足　6畳のお部屋に200sizeを購入しましたがバッチリ　お値段以上のお品でした　ずれも無し', who: '4748ともさん / 女性・50代 / 2026.08.15' },
+    { stars: 5, q: '良い色で、部屋に馴染んでいます', b: 'オフホワイトを注文しました。良い色で、部屋に馴染んでいます。座り心地も良い感じです。注文してすぐに届いたので良かったです！！', who: '購入者さん / 2026.03.07' },
+    { stars: 5, q: '他にはないデザイン、痛いところに手が届く設計', b: 'とても可愛い家具が買えました。他にはないデザイン、痛いところに手が届く設計、理想的な家具でした！対応も早く、傷もありませんでした。また機会があれば利用したいです。', who: 'mamanoakijikanさん / 2026.03.01' },
+    { stars: 5, q: 'めちゃくちゃ可愛いです。色味もとても良かったです', b: 'めちゃくちゃ可愛いです。色味もとても良かったです！組み立てが大変そうだったので完成品を購入しましたが取っ手を付けるだけだったので本当に良かったです！', who: '購入者さん / 2026.04.28' },
+    { stars: 5, q: '厚みもあって高級感があり色合いも良く', b: '厚みもあって高級感があり色合いも良く、とても良商品です。', who: '購入者さん / 2026.08.27' },
+    { stars: 4, q: 'おもちゃ感があるけど、安っぽくなくて良いです', b: 'とてもかわいいです。おもちゃ感があるけど、安っぽくなくて良いです。電池つきだと◎', who: 'ニノ8577さん / 2026.07.27' },
   ],
 
   // ⑨ クロージング
@@ -166,7 +182,7 @@ function SHero() {
         <div className="il-k2-hero__copy">
           <div className="il-s-hero__photo-sp" style={{ backgroundImage: `url(${SESAME.heroImage})` }}></div>
           <div className="il-s-hero__head">
-            <p className="il-eyebrow">FREE AI INTERIOR ／ SESAME</p>
+            <p className="il-eyebrow">FREE AI INTERIOR</p>
             <h1 className="il-k2-hero__title" dangerouslySetInnerHTML={{ __html: v.titleHtml }} />
             <p className="il-k2-hero__lead">{v.lead}</p>
           </div>
@@ -205,22 +221,24 @@ function SIntro() {
       <div className="il-container">
         <div className="il-section-head il-section-head--center">
           <p className="il-eyebrow" style={{ justifyContent: 'center' }}>{d.eyebrow}</p>
-          <h2 className="il-h-section" dangerouslySetInnerHTML={{ __html: 'はじめまして、<em>SESAME</em>です' }} />
+          <h2 className="il-h-section" dangerouslySetInnerHTML={{ __html: 'はじめまして、<em>4FULグループ</em>です' }} />
           <p className="il-section-lede il-section-lede--center" dangerouslySetInnerHTML={{ __html: d.title }} />
-          <ul className="il-s-badges il-s-badges--row">
-            {SESAME.heroBadges.map((b, i) => <li key={i}>{b}</li>)}
-          </ul>
         </div>
         <div className="il-s-intro">
           <div className="il-s-intro__body">
-            {d.body.map((p, i) => <p key={i}>{p}</p>)}
+            {d.brands.map((br, i) => (
+              <div key={i} className="il-s-brand">
+                <h3 className="il-s-brand__name">{br.name}</h3>
+                {br.body.map((p, k) => <p key={k}>{p}</p>)}
+              </div>
+            ))}
           </div>
           <div className="il-s-relation">
             <p className="il-s-relation__label">GROUP RELATION</p>
             {d.relation.map((r, i) => (
               <div key={i} className="il-s-relation__row">
                 <span className="il-s-relation__k">{r.k}</span>
-                <span className="il-s-relation__v">{r.v}</span>
+                {r.v && <span className="il-s-relation__v">{r.v}</span>}
                 {r.url && (
                   <a className="il-s-relation__link" href={r.url} target="_blank" rel="noopener noreferrer">
                     {r.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
@@ -333,8 +351,8 @@ function SReasons() {
     <section className="il-section il-section--paper">
       <div className="il-container">
         <div className="il-section-head il-section-head--center">
-          <p className="il-eyebrow" style={{ justifyContent: 'center' }}>WHY SESAME</p>
-          <h2 className="il-h-section">SESAMEの家具が選ばれる<em>4つの理由</em></h2>
+          <p className="il-eyebrow" style={{ justifyContent: 'center' }}>WHY 4FUL</p>
+          <h2 className="il-h-section">SESAME・サヤンサヤンが<em>選ばれる理由</em></h2>
         </div>
         <div className="il-s-reasons">
           {SESAME.reasons.map((r, i) => (
@@ -480,7 +498,7 @@ function SVoices() {
         <div className="il-section-head il-section-head--center">
           <p className="il-eyebrow" style={{ justifyContent: 'center' }}>CUSTOMER VOICE</p>
           <h2 className="il-h-section">お客様の声</h2>
-          <p className="il-s-voices__source">楽天市場「SESAME（セサミ）家具・インテリア」ショップレビューより（★4.73 / 総数4,486件）<br />※2026年8月21日時点</p>
+          <p className="il-s-voices__source">楽天市場「SESAME（セサミ）家具・インテリア」・「ラグマット通販のサヤンサヤン」のショップレビューより</p>
         </div>
         <div className="il-s-voices-wrap">
           <div className="il-s-voices il-s-voices--carousel" ref={ref}>
