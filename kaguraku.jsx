@@ -26,7 +26,7 @@ const SESAME = {
   // ② はじめまして、4FULグループです
   intro: {
     eyebrow: 'ABOUT 4FUL GROUP',
-    title: '「住空間」×「ライフスタイル」=「住ライフスタイル創造企業」が、<em>4FULグループのコンセプト</em>です。',
+    title: '「住空間」×「ライフスタイル」=「住ライフスタイル創造企業」が、4FULグループのコンセプトです。',
     brands: [
       {
         name: 'SESAME（セサミ）',
