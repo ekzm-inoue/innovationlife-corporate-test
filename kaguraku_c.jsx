@@ -12,7 +12,7 @@ const SESAME = {
       id: 'C',
       label: 'C｜失敗回避・センス不安解消',
       titleHtml: 'AIとつくる、<br /><em>失敗しない部屋づくり。</em>',
-      lead: '無料AIインテリア診断実施中。',
+      lead: '無料AIインテリア提案実施中。',
       sub: '「センスに自信がない」「家具選びで失敗したくない」そんな悩みをAIが解決。あなたにぴったりのスタイルと家具をご提案します。',
     },
   ],
@@ -61,11 +61,11 @@ const SESAME = {
     { t: '生活感が出やすい', b: '脱いだ服や充電コード、推し活グッズの「一時置き場」がなくて散らかってしまう。' },
   ],
 
-  // ④ AI診断メイン
+  // ④ AI提案メイン
   aiSteps: [
-    { n: '01', t: 'LINEで友だち追加', b: 'まずは公式LINEに登録。ここから診断フォームのご案内が届きます。' },
+    { n: '01', t: 'LINEで友だち追加', b: 'まずは公式LINEに登録。ここからAIインテリア提案フォームのご案内が届きます。' },
     { n: '02', t: '質問に答える', b: '届いたリンクから、カンタンな質問に答えるだけ（所要時間の目安：約10分）。' },
-    { n: '03', t: 'AIが診断', b: 'あなたの好み・お部屋・予算をもとに、AIが分析します。' },
+    { n: '03', t: 'AIが提案', b: 'あなたの好み・お部屋・予算をもとに、AIが分析します。' },
     { n: '04', t: '専用レポートが届く', b: 'あなただけのインテリア提案レポートをお届けします。' },
   ],
   aiReport: [
@@ -73,11 +73,11 @@ const SESAME = {
     { icon: '🎨', t: 'おすすめカラーパレット', b: 'ベース／サブ／アクセントの黄金比を提案' },
     { icon: '📐', t: '空間活用の方向性', b: '家具配置・動線・収納のヒント' },
     { icon: '💡', t: '照明プランの提案', b: '暮らしに合う灯りの組み立て方' },
-    { icon: '🛋️', t: '家具選びのヒント', b: 'あなたのタイプに合うSESAMEアイテム' },
+    { icon: '🛋️', t: '家具選びのヒント', b: 'あなたのタイプに合うSESAME・サヤンサヤンアイテム' },
     { icon: '💰', t: '予算活用のめやす', b: '無理なく理想に近づく予算配分' },
   ],
-  aiSafe: '完全無料 ／ 約10分 ／ スマホで完結。LINE友だち追加でスタート、診断後は LINEで無料相談 も可能です。',
-  aiNote: '※診断フォームのURLは、LINE登録後にLINE経由でのみご案内します（LP上では公開していません）。',
+  aiSafe: '完全無料 ／ 約10分 ／ スマホで完結。LINE友だち追加でスタート、AIインテリア提案後は LINEで無料相談 も可能です。',
+  aiNote: '※AIインテリア提案フォームのURLは、LINE登録後にLINE経由でのみご案内します（LP上では公開していません）。',
 
   // ⑤ ブランドコンセプト
   concept: {
@@ -169,7 +169,7 @@ const SESAME = {
   ],
 
   // ⑨ クロージング
-  closingTitleHtml: 'まだ迷っているなら、まずは<em>10分の“診断”</em>から。',
+  closingTitleHtml: 'まだ迷っているなら、まずは<em>10分の“AIインテリア提案”</em>から。',
   closingSub: 'あなたの「理想のお部屋」の答えは、もう見つかります。',
 };
 
@@ -194,11 +194,11 @@ function SHero() {
           </div>
           <div className="il-k2-cta-row">
             <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
-              LINEで友だち追加して無料診断をはじめる
+              LINEで無料AI提案をはじめる
               <span className="il-k2-btn-note">無料・約10分</span>
             </a>
           </div>
-          <p className="il-s-hero-note">※診断は公式LINEの友だち追加が入口です。登録後、LINEで診断フォームのリンクが届きます。</p>
+          <p className="il-s-hero-note">※AIインテリア提案は公式LINEの友だち追加が入口です。登録後、LINEでAIインテリア提案フォームのリンクが届きます。</p>
         </div>
         <div className="il-k2-hero__media il-s-hero__media">
           <div className="il-k2-hero__photo" style={{ backgroundImage: `url(${SESAME.heroImage})` }} />
@@ -301,7 +301,7 @@ function SAiMain() {
           ))}
         </ol>
 
-        <p className="il-k2-sub-label il-s-sub-label" style={{ marginTop: 64 }}>診断でわかること</p>
+        <p className="il-k2-sub-label il-s-sub-label" style={{ marginTop: 64 }}>AIインテリア提案でわかること</p>
         <div className="il-s-report">
           {SESAME.aiReport.map((r, i) => (
             <div key={i} className="il-s-report__item">
@@ -317,7 +317,7 @@ function SAiMain() {
         <p className="il-k2-inset-note">{SESAME.aiSafe}<br/>{SESAME.aiNote}</p>
         <div className="il-k2-cta-row il-k2-cta-row--center">
           <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
-            LINEで友だち追加して無料診断をはじめる
+            LINEで無料AI提案をはじめる
             <span className="il-k2-btn-note">無料</span>
           </a>
         </div>
@@ -439,7 +439,7 @@ function SSeries() {
           <p className="il-eyebrow" style={{ justifyContent: 'center' }}>PICK YOUR SERIES</p>
           <h2 className="il-h-section"><em>SESAMEの人気シリーズ</em>紹介</h2>
           <p className="il-section-lede il-section-lede--center">
-            診断で分かったスタイルやカラーパレットをヒントに、SESAMEの人気シリーズから最適な一品を選べます。
+            AIインテリア提案で分かったスタイルやカラーパレットをヒントに、SESAMEの人気シリーズから最適な一品を選べます。
           </p>
         </div>
         <div className="il-s-series">
@@ -531,7 +531,7 @@ function SClosing() {
         <p className="il-s-closing__sub">{SESAME.closingSub}</p>
         <div className="il-k2-cta-row il-k2-cta-row--center">
           <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
-            LINEで友だち追加して無料診断をはじめる
+            LINEで無料AI提案をはじめる
             <span className="il-k2-btn-note">無料・約10分</span>
           </a>
         </div>
