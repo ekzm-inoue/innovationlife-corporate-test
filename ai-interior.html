@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSX7PPMR');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 導線を張るまで検索エンジンに載せない。公開（導線追加）時にこの行を削除する -->
+<meta name="robots" content="noindex">
+<title>AIと見つける、私に似合う部屋づくり ｜ カグラクのAIインテリア提案</title>
+<meta name="description" content="カグラクのAIインテリア提案。お部屋の写真1枚から、好きなテイストで模様替えした完成イメージをLINEでお届けします。">
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/overrides.css?v=2">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="image-slot.js"></script>
+<style>
+:root{--main:#B08A63;--main-d:#7A5C3E;--line:#06C755;--line-d:#05A847;--bg:#FAF7F2;--card:#FFFFFF;--ink:#3A3129;--ink-2:#6B5F54;--rule:#E9E1D6;--pink:#E8B4B0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.85;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
+a{color:var(--main-d)}a:hover{color:var(--main)}
+h1,h2{font-family:"Noto Serif JP",serif;font-weight:500;line-height:1.5;letter-spacing:.04em;text-wrap:balance}h3{font-weight:600;line-height:1.5}
+p{text-wrap:pretty}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.sec-label{display:flex;align-items:center;gap:10px;font-family:"Cormorant Garamond",serif;font-size:15px;font-weight:500;color:var(--main);letter-spacing:.24em;margin-bottom:16px}
+.sec-label::before{content:"";width:24px;height:2px;background:var(--main)}
+.sec-title{font-size:clamp(24px,3.6vw,34px);margin-bottom:40px}
+.center{text-align:center}.center .sec-label{justify-content:center}
+.slot{position:relative;width:100%;border-radius:16px;overflow:hidden;background:#EFE8DE}
+.r169{aspect-ratio:16/9}.r32{aspect-ratio:3/2}.r43{aspect-ratio:4/3}
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--line);color:#fff;text-decoration:none;font-weight:600;font-size:17px;padding:20px 40px;border-radius:999px;box-shadow:0 6px 0 var(--line-d);transition:transform .15s,box-shadow .15s;min-height:60px}
+.btn-line:hover{color:#fff;transform:translateY(2px);box-shadow:0 4px 0 var(--line-d)}
+.btn-line img{width:28px;height:28px}
+.cta-row{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:48px}
+.cta-row small{font-size:13px;color:var(--ink-2)}
+/* hero */
+.hero{padding:136px 0 88px}
+.hero-grid{display:grid;gap:40px}
+.hero .target{display:inline-block;font-size:clamp(14px,1.8vw,16px);font-weight:700;color:var(--main-d);background:#F3EBE0;padding:8px 16px;border-radius:8px;margin-bottom:20px}
+.hero h1{font-size:clamp(32px,5.4vw,54px);letter-spacing:.06em;margin-bottom:24px}
+.nw{white-space:nowrap;display:inline-block}.hero .target{word-break:keep-all;overflow-wrap:anywhere}
+.hero h1 em{font-style:normal;color:var(--main)}
+.hero .desc{font-size:clamp(15px,1.8vw,17px);color:var(--ink-2);max-width:640px}
+.hero .desc strong{color:var(--ink)}
+.ba-labels{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;font-family:"Cormorant Garamond",serif;font-size:14px;font-weight:500;letter-spacing:.24em;color:var(--ink-2)}
+.ba-labels span:last-child{text-align:right;color:var(--main)}
+/* empathy */
+.emp{background:var(--card)}
+.emp-grid{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:48px;align-items:center;max-width:920px;margin:0 auto}.emp-list{display:grid;gap:12px;list-style:none}@media (max-width:720px){.emp-grid{grid-template-columns:1fr;gap:28px}.emp-img{max-width:320px;margin:0 auto;width:100%}}
+.emp-list li{background:var(--bg);border-radius:12px;padding:18px 22px;font-weight:500;font-size:17px;line-height:1.7;display:flex;gap:14px}
+.emp-list li::before{content:"";flex:none;width:22px;height:22px;margin-top:3px;border-radius:50%;border:2px solid var(--main);background:radial-gradient(circle,var(--main) 0 4px,transparent 5px)}
+.emp-close{text-align:center;font-family:"Noto Serif JP",serif;font-size:clamp(18px,2.4vw,22px);font-weight:500;margin-top:40px}
+.emp-close::before{content:"";display:block;width:2px;height:40px;background:var(--rule);margin:0 auto 24px}
+/* solution */
+.benefit{background:var(--card);border-radius:20px;padding:36px 32px;margin-bottom:56px;display:grid;gap:8px;border:1px solid var(--rule)}
+.benefit b{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:15px;letter-spacing:.24em;color:var(--main)}
+.benefit p{font-family:"Noto Serif JP",serif;font-size:clamp(19px,2.6vw,26px);font-weight:500;line-height:1.55}
+.benefit p em{font-style:normal;background:linear-gradient(transparent 62%,#F1DFC9 62%)}
+.steps-grid{display:grid;gap:40px;align-items:center}
+.steps{list-style:none;display:grid;gap:16px}
+.steps li{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:var(--card);border-radius:16px;padding:22px 24px}
+.steps .n{width:48px;height:48px;border-radius:50%;background:var(--main);color:#fff;font-family:"Noto Serif JP",serif;font-weight:500;font-size:20px;display:grid;place-items:center}
+.steps p{font-weight:500;font-size:16px;padding-top:10px}
+.steps3{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.steps3 li{display:grid;gap:20px;align-content:start}
+.st{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start}
+.st p{font-weight:500;padding-top:8px}
+.phone{margin:0 auto;width:100%;max-width:260px;aspect-ratio:9/16;border-radius:28px;overflow:hidden;border:6px solid #fff;box-shadow:0 12px 32px rgba(58,49,41,.14),0 0 0 1px var(--rule);background:#fff}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.deliver3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-bottom:32px}
+.deliver3 figcaption{text-align:center;font-weight:600;font-size:15px;margin-top:16px}
+/* plan */
+.plan{background:var(--card)}
+.price{max-width:560px;margin:0 auto 56px;border:2px solid var(--main);border-radius:20px;padding:40px 32px;text-align:center;background:var(--bg)}
+.price h3{font-size:20px;margin-bottom:8px}
+.price .yen{font-family:"Noto Serif JP",serif;font-size:56px;font-weight:500;color:var(--main);line-height:1.2;margin-bottom:16px}
+.price p{font-size:15px;color:var(--ink-2)}
+.deliver{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:32px}
+.deliver figcaption{font-weight:700;font-size:15px;margin-top:12px}
+.deliver .ph{font-size:12px;color:var(--ink-2);font-weight:500}
+.deliver-note{font-size:15px;color:var(--ink-2);background:var(--bg);border-radius:12px;padding:20px 24px}
+/* compare */
+.cmp-lead{font-family:"Noto Serif JP",serif;font-size:clamp(16px,2vw,19px);font-weight:500;margin-bottom:40px;max-width:760px}
+.cmp-lead em{font-style:normal;color:var(--main-d)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+.cmp > div{border-radius:20px;padding:32px 28px}
+.cmp .them{background:#EFEAE3}
+.cmp .us{background:var(--card);border:2px solid var(--main)}
+.cmp h3{font-size:17px;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.cmp .us h3{color:var(--main-d)}
+.cmp ul{list-style:none;display:grid;gap:12px}
+.cmp li{font-size:17px;font-weight:500;padding-bottom:12px;border-bottom:1px dashed var(--rule)}
+.cmp li:last-child{border:none;padding-bottom:0}
+.cmp .them li{color:var(--ink-2)}
+.ba-sec{padding-top:0}.ba-lead{color:var(--ink-2);margin:0 auto 40px;max-width:640px}.ba-img{margin:0;border-radius:20px;overflow:hidden;box-shadow:0 12px 32px rgba(58,49,41,.12)}.ba-img img{display:block;width:100%;height:auto}
+.hero .desc p{margin-bottom:10px}.hero .desc p:last-child{margin-bottom:0}
+.emp-bridge{max-width:720px;margin:48px auto 0;text-align:center;font-size:16px;line-height:2}.emp-bridge p:first-child{font-family:"Noto Serif JP",serif;font-size:clamp(18px,2.2vw,21px);color:var(--ink);margin-bottom:8px}.emp-bridge p:not(:first-child){color:var(--ink-2)}
+.emp-list li{font-size:15.5px}
+.benefit-body{margin-top:12px;font-size:15px;color:var(--ink-2);line-height:2}.benefit-body p{font-family:inherit;font-size:inherit;font-weight:400;line-height:inherit}
+.st h3{font-size:17px;margin:8px 0 10px}.st p{padding-top:0;font-size:14.5px;color:var(--ink-2);margin-bottom:6px}
+.steps-close{text-align:center;margin-top:48px}.steps-close p:first-child{font-family:"Noto Serif JP",serif;font-size:clamp(18px,2.2vw,21px);color:var(--ink)}.steps-close p:last-child{color:var(--ink-2)}
+.price p:not(.yen){margin-bottom:6px}
+.deliver3 figcaption{text-align:left;font-weight:400;font-size:14.5px;color:var(--ink-2);line-height:1.9}.deliver3 figcaption b{display:block;text-align:center;font-family:"Noto Serif JP",serif;font-weight:500;font-size:18px;color:var(--ink);margin-bottom:10px}.deliver3 figcaption p{margin-bottom:6px}
+.fine{font-size:12.5px;color:var(--ink-2);margin-top:20px;line-height:1.8}
+.cmp-lead{text-align:center;margin-inline:auto}.cmp-lead p{margin-bottom:8px}
+.cmp li{font-size:15px;line-height:1.8}
+.cmp-close{text-align:center;margin-top:40px}.cmp-close p:first-child{font-family:"Noto Serif JP",serif;font-size:clamp(18px,2.2vw,22px);color:var(--ink)}.cmp-close p:last-child{color:var(--ink-2)}
+.ba-lead p{margin-bottom:4px}
+.ba-caps{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;font-size:14px;font-weight:500;color:var(--ink)}.ba-caps span:last-child{text-align:right;color:var(--main-d)}
+.faq-list .ans p{margin-bottom:6px}
+.story-lede p{margin-bottom:8px}.brand-catch{font-family:"Noto Serif JP",serif;font-size:17px;color:var(--main-d)}
+.final-lead{max-width:640px;margin:0 auto 32px;text-align:center;color:rgba(255,255,255,.85);line-height:2}.final-lead p{color:rgba(246,241,232,.85)}.final-note{text-align:center;margin-top:16px;font-size:13px;color:rgba(255,255,255,.75)}
+.brand-msg{background:var(--bg);text-align:center;padding:40px 24px;font-family:"Noto Serif JP",serif;font-size:clamp(17px,2vw,20px);color:var(--main-d);letter-spacing:.06em}
+.kv-note{margin-top:8px;padding-right:24px;text-align:right}
+.voice{background:var(--card)}
+.voice-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.voice-card{position:relative;margin:0;background:var(--bg);border-radius:16px;padding:32px 28px 28px;display:flex;flex-direction:column;gap:14px}
+.voice-card::before{content:"“";position:absolute;top:6px;left:20px;font-family:"Noto Serif JP",serif;font-size:48px;line-height:1;color:var(--main);opacity:.35}
+.voice-card h3{font-family:"Noto Serif JP",serif;font-weight:500;font-size:18px;line-height:1.6;color:var(--ink);margin-top:12px}
+.voice-card blockquote{margin:0;flex:1}.voice-card blockquote p{font-size:14.5px;line-height:1.95;color:var(--ink-2)}
+.voice-card figcaption{font-size:13px;color:var(--main-d);border-top:1px solid var(--rule);padding-top:12px}
+.voice-dummy{position:absolute;top:14px;right:16px;font-size:11px;color:#fff;background:#C0473F;padding:2px 8px;border-radius:4px}
+/* 切り出したキャプチャ（文字の多い部分を除いた画面） */
+.shot{margin:0 auto;width:100%;max-width:280px;border-radius:20px;overflow:hidden;border:6px solid #fff;box-shadow:0 12px 32px rgba(58,49,41,.14),0 0 0 1px var(--rule);background:#fff}
+.shot img{display:block;width:100%;height:auto}
+.steps3 .shot,.deliver3 .shot{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.steps3 .shot img,.deliver3 .shot img{width:auto;max-width:100%;max-height:100%}
+/* ブランドカード（ロゴ＋短い説明） */
+.brand-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:8px}
+.brand-card{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.brand-card .mark{height:60px;display:flex;align-items:center}
+.brand-card .mark img{width:auto;max-height:100%}
+.brand-card .mark img.sayan{max-height:40px}
+.brand-card h3{font-family:"Noto Serif JP",serif;font-weight:500;font-size:18px;color:var(--ink)}
+.brand-card p{font-size:14.5px;color:var(--ink-2);line-height:1.9}
+.brand-card a{font-family:"Cormorant Garamond",serif;font-size:16px;text-decoration:none}
+.brand-card a::after{content:" →"}
+.group-link{text-align:center;margin-top:24px;font-family:"Cormorant Garamond",serif;font-size:16px}
+/* faq */
+.faq{background:var(--card)}
+.faq-list{display:grid;gap:12px}
+.faq-list details{background:var(--bg);border-radius:16px;padding:0 24px}
+.faq-list summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:32px 1fr 20px;gap:12px;align-items:center;padding:22px 0;font-weight:500;font-size:16px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:22px;color:var(--main);text-align:center}
+.faq-list details[open] summary::after{content:"−"}
+.q,.a{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:17px}
+.q{background:var(--main);color:#fff}
+.a{background:#fff;color:var(--main);border:1.5px solid var(--main)}
+.faq-list .ans{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:0 0 24px;font-size:15px}
+.faq-list .ans p{padding-top:4px}
+.guarantee{display:flex;gap:16px;align-items:center;margin-top:32px;padding:24px 28px;border:1.5px solid var(--line);border-radius:16px;background:#F2FBF5}
+.guarantee b{flex:none;font-size:13px;font-weight:600;letter-spacing:.12em;color:#fff;background:var(--line-d);padding:6px 12px;border-radius:6px}
+.guarantee p{font-weight:500}
+/* story */
+.story p.body{font-size:clamp(16px,2vw,18px);line-height:2.1}
+/* final cta */
+.final{background:var(--main);color:#fff;text-align:center}
+.final .sec-label{color:#fff;justify-content:center}.final .sec-label::before{background:#fff}
+.final h2{font-size:clamp(26px,4vw,40px);margin-bottom:24px}
+.final .perk{display:inline-block;background:rgba(255,255,255,.14);border-radius:12px;padding:16px 24px;font-size:15px;max-width:600px}
+.final .btn-line{background:#fff;color:var(--line-d);box-shadow:0 6px 0 rgba(0,0,0,.18)}
+.final .btn-line:hover{color:var(--line-d)}
+.final .cta-row small{color:#fff}
+/* footer */
+.ft{font-size:13px}
+.ft dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 24px}
+.ft dt{font-weight:600}
+
+.ft{background:var(--bg);color:var(--ink-2);border-top:1px solid var(--rule);padding:32px 0}.ft dt{color:var(--ink)}.ft dd{margin:0}
+/* sticky mobile cta */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:none}
+.sticky .btn-line{width:100%;font-size:16px;padding:16px}
+@media (min-width:880px){
+.hero .hero-grid{max-width:none;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:56px;padding-left:max(24px,calc((100vw - 1080px)/2 + 24px));padding-right:0}.hero-kv{border-radius:20px 0 0 20px}
+.steps-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:879px){.hero{padding-top:88px}.hero-grid > div:last-child{order:-1;margin:0 -24px}.hero-kv{border-radius:0}}
+@media (max-width:640px){
+section{padding:72px 0}
+.cmp{grid-template-columns:1fr}
+.btn-line{width:100%;font-size:17px;padding:18px 24px}
+.sticky{display:block}
+body{padding-bottom:84px}
+.guarantee{flex-direction:column;align-items:flex-start}
+.ft dl{grid-template-columns:1fr;gap:2px}.ft dd{margin-bottom:12px}
+}
+</style>
+</head>
+<body data-page="ai-interior">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSX7PPMR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="il-header-root"></div>
+
+<section class="hero" data-screen-label="01 期待させる">
+<div class="wrap hero-grid">
+<div>
+<h1>AIと見つける、<br><span class="nw"><em>私に似合う</em></span><br><span class="nw">部屋づくり</span></h1>
+<div class="desc"><p><strong>お部屋の写真1枚から。</strong></p><p>好きなテイストで模様替えした完成イメージが、LINEに届きます。</p></div>
+<div class="cta-row" style="align-items:flex-start"><a class="btn-line" href="https://lin.ee/5p0dQyV" target="_blank" rel="noopener"><img src="assets/sns_line.png" alt="">LINEで無料で試してみる</a></div>
+</div>
+<div>
+<div class="slot r32 hero-kv"><image-slot id="ai-hero-kv2" shape="rect" src="assets/ai-interior_kv.png" placeholder="キービジュアル"></image-slot></div>
+<p class="fine kv-note">※AIインテリア提案結果画面はイメージです。</p>
+</div>
+</div>
+</section>
+
+<section class="emp" data-screen-label="02 共感を得る">
+<div class="wrap">
+<div class="center"><p class="sec-label">PROBLEM</p><h2 class="sec-title">お部屋づくりに迷っていませんか？</h2></div>
+<div class="emp-grid">
+<div class="emp-img"><div class="slot r32"><image-slot id="ai-empathy2" shape="rect" src="assets/ai-interior_empathy.png" placeholder="悩みの場面"></image-slot></div></div>
+<ul class="emp-list">
+<li><div>「かわいい！」と買った家具が、部屋になじまない</div></li>
+<li><div>保存した写真のような部屋に、なかなか近づかない</div></li>
+<li><div>選択肢が多すぎて、カートに入れたまま…</div></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section data-screen-label="03 解決方法を示す">
+<div class="wrap">
+<div class="center"><p class="sec-label">SOLUTION</p><h2 class="sec-title">写真1枚から、理想のお部屋をイメージ。</h2></div>
+<div class="benefit"><b data-comment-anchor="b72fb31bf0-b">BENEFIT</b><p>買う前に、<em>自分の部屋に置いたときの雰囲気</em>をイメージできる。</p><div class="benefit-body"><p>「この色、意外と合うかも！」<br>そんな発見が、家具選びをもっと楽しく。</p></div></div>
+<ol class="steps3">
+<li><figure class="shot"><img src="assets/ai-interior_upload_crop.png" alt="部屋を選んで写真を送る画面"></figure><div class="st"><span class="n">1</span><div><h3>お部屋の写真を送る</h3><p>LINEで友だち追加して、模様替えしたい部屋を1枚。全体が写っていればOK。</p></div></div></li>
+<li><figure class="shot"><img src="assets/ai-interior_form_crop.png" alt="暮らし方と好みを選ぶ画面"></figure><div class="st"><span class="n">2</span><div><h3>好みを選ぶ</h3><p>好きなテイストや色を選びます。</p></div></div></li>
+<li><figure class="shot"><img src="assets/ai-interior_ba_crop.png" alt="Before・After画面"></figure><div class="st"><span class="n">3</span><div><h3>理想のお部屋をチェック</h3><p>約3〜5分で、Before・Afterとおすすめアイテムが届きます。</p></div></div></li>
+</ol>
+<p class="fine">※AIインテリア提案結果画面はイメージです。</p>
+<div class="cta-row"><a class="btn-line" href="https://lin.ee/5p0dQyV" target="_blank" rel="noopener"><img src="assets/sns_line.png" alt="">LINEで無料で試してみる</a></div>
+</div>
+</section>
+
+<section class="plan" data-screen-label="04 価格と中身">
+<div class="wrap">
+<div class="center"><p class="sec-label">PRICE</p></div>
+<div class="price"><h3>AIインテリア提案</h3><p class="yen">0円</p><p>完成イメージを見るのは無料です。</p></div>
+<div class="deliver3">
+<figure><div class="shot"><img src="assets/ai-interior_ba_crop.png" alt="Before・After"></div><figcaption><b>Before・After</b><p>今の部屋と模様替え後を、見比べられる。</p></figcaption></figure>
+<figure><div class="shot"><img src="assets/ai-interior_report_crop.png" alt="提案レポート"></div><figcaption><b>提案レポート</b><p>おすすめの色や、組み合わせ方がわかる。</p></figcaption></figure>
+<figure><div class="shot"><img src="assets/ai-interior_items_crop.png" alt="提案商品"></div><figcaption><b>提案商品</b><p>セサミの家具やサヤンサヤンのラグを、そのまま商品ページでチェック。</p></figcaption></figure>
+</div>
+<p class="fine">※結果画面はイメージです。商品の購入には別途料金がかかります。</p>
+</div>
+</section>
+
+<section data-screen-label="05 比較してもらう">
+<div class="wrap">
+<div class="center"><p class="sec-label">COMPARISON</p><h2 class="sec-title">家具選び、どう変わる？</h2></div>
+<div class="cmp-lead"><p>見るのは、誰かの部屋ではなく<em>“自分の部屋”</em>。</p></div>
+<div class="cmp">
+<div class="them"><h3>自分で探す</h3><ul><li>SNSを見ながら想像する</li><li>色やサイズを一つずつ調べる</li><li>買ってから「思ってたのと違う…」と感じることも</li></ul></div>
+<div class="us"><h3>AIインテリア提案</h3><ul><li>自分の部屋で、テイストを試せる</li><li>組み合わせを、画像で確かめられる</li><li>合いそうなアイテムを見てから選べる</li></ul></div>
+</div>
+</div>
+</section>
+
+<section class="ba-sec" data-screen-label="06 完成イメージ">
+<div class="wrap">
+<div class="center"><p class="sec-label">BEFORE / AFTER</p><h2 class="sec-title" style="margin-bottom:16px">同じ部屋が、変身</h2>
+<div class="ba-lead"><p>広さも間取りも、そのまま。</p><p><strong>家具と色を整えると、印象はここまで変わります。</strong></p></div></div>
+<figure class="ba-img"><img src="assets/ai-interior_room_ba.png" alt="今のお部屋（Before）と、AIが提案するお部屋（After）の比較"></figure>
+<div class="ba-caps"><span>Before｜今のお部屋の例</span><span>After｜AIが提案するお部屋の例</span></div>
+<p class="fine">※After画像はAIによるイメージです。実際の商品・寸法・色味・配置などとは異なる場合があります。</p>
+</div>
+</section>
+<!-- 利用者の声：実際の声と画像が揃うまで非表示（コメントアウト）。公開時はこのコメントを外し、ダミーを差し替える
+<section class="voice" data-screen-label="06b 利用者のお声">
+<div class="wrap">
+<div class="center"><p class="sec-label">VOICE</p><h2 class="sec-title">利用者のお声</h2></div>
+<div class="voice-list">
+<figure class="voice-card"><span class="voice-dummy">ダミー</span><h3>「この色、意外と合うかも」が見つかった</h3><blockquote><p>白い棚×木目のテーブルの提案が新鮮で、さっそくラグから変えました。</p></blockquote><figcaption>20代・1K・会社員</figcaption></figure>
+<figure class="voice-card"><span class="voice-dummy">ダミー</span><h3>引っ越し前に、新生活のイメージがわいた</h3><blockquote><p>内見の写真で試したら、どんな部屋にしたいか決まりました。</p></blockquote><figcaption>20代・ワンルーム・学生</figcaption></figure>
+<figure class="voice-card"><span class="voice-dummy">ダミー</span><h3>LINEで手軽なのがうれしい</h3><blockquote><p>アプリ不要で気軽。試すうちに、自分の好みがわかってきました。</p></blockquote><figcaption>30代・1K・会社員</figcaption></figure>
+</div>
+</div>
+</section>
+利用者の声ここまで -->
+<section class="il-section il-section--paper story" data-screen-label="08 運営ブランド紹介">
+<div class="il-container">
+<div class="il-section-head il-section-head--center">
+<p class="il-eyebrow" style="justify-content:center">ABOUT 4FUL GROUP</p>
+<h2 class="il-h-section">私たち「<em>4FULグループ</em>」について</h2>
+<div class="il-section-lede il-section-lede--center story-lede"><p>「住空間」×「ライフスタイル」をかたちにする<em>“住ライフスタイル創造企業”</em>です。</p><p>「こんな商品が、こんな価格であったらいいのに」を実現し、国内外に展開しています。</p></div>
+</div>
+<div class="brand-cards">
+<article class="brand-card">
+<div class="mark"><img src="assets/logo_sesame.png" alt="SESAME あなたの暮らしを開く鍵。"></div>
+<h3>ワンルームでも、羨ましがられる部屋に。</h3>
+<p>限られた空間を活かす“スペパ”設計の、4FULグループの家具ブランド。北欧・韓国風・ホワイトなど、好きなテイストで選べます。</p>
+<a href="https://www.sesame-kagu.jp/" target="_blank" rel="noopener noreferrer">www.sesame-kagu.jp</a>
+</article>
+<article class="brand-card">
+<div class="mark"><img class="sayan" src="assets/logo_sayansayan.jpg" alt="SAYANSAYAN（サヤンサヤン）IMPORT RUG &amp; CARPET"></div>
+<h3>世界のラグを、輸入直販ならではの価格で。</h3>
+<p>世界各地の産地から直接買い付けた、4FULグループのラグブランド。玄関マットから6帖サイズのカーペットまでそろいます。</p>
+<a href="https://sayansayan.co.jp/" target="_blank" rel="noopener noreferrer">sayansayan.co.jp</a>
+</article>
+</div>
+<p class="group-link"><a href="https://4ful.co.jp/" target="_blank" rel="noopener noreferrer">4ful.co.jp →</a></p>
+</section>
+
+<section class="faq" data-screen-label="07 不安を解消する">
+<div class="narrow">
+<div class="center"><p class="sec-label">FAQ</p><h2 class="sec-title">よくあるご質問</h2></div>
+<div class="faq-list">
+<details open><summary><span class="q">Q</span>どんな写真を送ればいい？</summary><div class="ans"><span class="a">A</span><div><p>模様替えしてみたいお部屋の写真を1枚送ってください。</p><p>なるべくお部屋全体が写っていて、家具や床の様子がわかる写真がおすすめです。</p><p>物が少ない状態で撮影すると、AIがイメージを作りやすくなります。</p><p>これから引っ越す予定の方は、引っ越し先のお部屋の写真でもお試しいただけます。</p></div></div></details>
+<details><summary><span class="q">Q</span>始めるには何が必要？</summary><div class="ans"><span class="a">A</span><div><p>LINEの友だち追加と、お部屋の写真があれば始められます。</p><p>画面の案内に沿って、お名前や好きなインテリアのテイスト、お部屋についての情報を入力してください。</p><p>特別なアプリを新しくインストールする必要はありません。</p></div></div></details>
+<details><summary><span class="q">Q</span>家具の大きさは画像どおり？</summary><div class="ans"><span class="a">A</span><div><p>AIが作る画像は、お部屋づくりの参考イメージです。</p><p>実際に販売されている家具のサイズ・デザイン・色味などとは異なる場合があります。</p><p>気になる家具が見つかったら、商品ページでサイズや仕様を確認し、お部屋に置けるかをチェックしてから購入してください。</p></div></div></details>
+</div>
+</div>
+</section>
+
+<section class="il-k2-final" data-screen-label="09 行動を促す">
+<div class="il-container il-k2-final__inner">
+<p class="il-eyebrow il-eyebrow--inverted" style="justify-content:center">START</p>
+<h2 class="il-k2-final__title">あなたのお部屋にも、<br><em>「好き」</em>を詰め込もう。</h2>
+<div class="il-k2-cta-row il-k2-cta-row--center">
+<a class="il-btn il-btn--primary il-btn--lg" href="https://lin.ee/5p0dQyV" target="_blank" rel="noopener noreferrer">LINEで無料で試してみる</a>
+</div>
+</div>
+</section>
+
+
+<div id="il-footer-root"></div>
+
+<div class="sticky"><a class="btn-line" href="https://lin.ee/5p0dQyV" target="_blank" rel="noopener"><img src="assets/sns_line.png" alt="">LINEで無料で試してみる</a></div>
+<script src="data.js"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel">
+ReactDOM.createRoot(document.getElementById('il-header-root')).render(<ILHeader />);
+ReactDOM.createRoot(document.getElementById('il-footer-root')).render(<ILFooter />);
+</script>
+</body>
+</html>
