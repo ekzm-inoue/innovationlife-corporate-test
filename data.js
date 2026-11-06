@@ -112,6 +112,21 @@ window.IL_DATA = {
       image: 'assets/hero_furniture_design.png',
       overlay: 'FOR YOU',
     },
+    {
+      num: '05',
+      audience: 'AI INTERIOR',
+      titleHtml: '<em>AIインテリア提案</em>',
+      lede: '部屋の写真を送るだけで、AIが家具を置いた完成イメージをLINEで無料でお届けします。',
+      points: [
+        '部屋の写真1枚で、約3〜5分でビフォー・アフター',
+        'SESAME・サヤンサヤンの実在の商品からご提案',
+        'LINEで無料',
+      ],
+      cta: 'AIインテリア提案ページへ',
+      href: 'ai-interior.html',
+      image: 'assets/ai-interior_card.jpg',
+      overlay: 'AI INTERIOR',
+    },
   ],
 
   cases: [
@@ -278,6 +293,7 @@ window.IL_DATA = {
         { label: '家具メーカー様',         href: 'furnituremakers.html', eyebrow: 'FOR FURNITUREMAKERS' },
         { label: '民泊業者様',             href: 'minpaku.html',         eyebrow: 'FOR VACATION RENTALS' },
         { label: '個人のお客様（カグラクのご紹介）',     href: 'kaguraku.html', eyebrow: 'FOR INDIVIDUALS' },
+        { label: 'AIインテリア提案',       href: 'ai-interior.html',      eyebrow: 'AI INTERIOR' },
       ],
     },
     {
