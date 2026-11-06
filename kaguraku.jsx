@@ -194,7 +194,7 @@ function SHero() {
             <img className="il-s-collab__logo il-s-collab__logo--sesame" src="assets/logo_sesame.png" alt="SESAME" />
           </div>
           <div className="il-k2-cta-row">
-            <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
+            <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer" data-meta-lead="hero">
               LINEで無料AI提案をはじめる
               <span className="il-k2-btn-note">無料・約10分</span>
             </a>
@@ -317,7 +317,7 @@ function SAiMain() {
 
         <p className="il-k2-inset-note">{SESAME.aiSafe}<br/>{SESAME.aiNote}</p>
         <div className="il-k2-cta-row il-k2-cta-row--center">
-          <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
+          <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer" data-meta-lead="ai">
             LINEで無料AI提案をはじめる
             <span className="il-k2-btn-note">無料</span>
           </a>
@@ -531,7 +531,7 @@ function SClosing() {
         <h2 className="il-k2-final__title" dangerouslySetInnerHTML={{ __html: SESAME.closingTitleHtml }} />
         <p className="il-s-closing__sub">{SESAME.closingSub}</p>
         <div className="il-k2-cta-row il-k2-cta-row--center">
-          <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer">
+          <a className="il-btn il-btn--primary il-btn--lg" href={S_LINE_URL} target="_blank" rel="noopener noreferrer" data-meta-lead="final">
             LINEで無料AI提案をはじめる
             <span className="il-k2-btn-note">無料・約10分</span>
           </a>
