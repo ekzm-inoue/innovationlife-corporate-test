@@ -54,21 +54,6 @@ window.IL_DATA = {
   targets: [
     {
       num: '01',
-      audience: 'FOR BUILDERS',
-      titleHtml: '<em>工務店様・ハウスメーカー様</em>',
-      lede: '間取りの完成は、暮らしのはじまり。建つ家、空間にふさわしいインテリアを一括でご提案いたします。',
-      points: [
-        '完工前のインテリアトータルコーディネート',
-        '提携家具・照明・カーテンを一括見積',
-        'エンドユーザー様への直接ご提案も可能',
-      ],
-      cta: '工務店・ハウスメーカー様向けサービスを見る',
-      href: 'builders.html',
-      image: 'assets/hero_living_planning.png',
-      overlay: 'FOR BUILDERS',
-    },
-    {
-      num: '02',
       audience: 'FOR FURNITURE MAKERS',
       titleHtml: '<em>家具メーカー様</em>',
       lede: '商品を販売する、その先へ。大切な商品を、お客様の暮らしに寄り添うかたちでご提案いたします。',
@@ -83,7 +68,7 @@ window.IL_DATA = {
       overlay: 'FOR MAKERS',
     },
     {
-      num: '03',
+      num: '02',
       audience: 'FOR VACATION RENTALS',
       titleHtml: '<em>民泊業者様</em>',
       lede: '家具の選定・調達から一括配送・組み立てまで。集客と収益を最大化する空間プロデュースをご提案いたします。',
@@ -98,7 +83,7 @@ window.IL_DATA = {
       overlay: 'FOR RENTALS',
     },
     {
-      num: '04',
+      num: '03',
       audience: 'FOR INDIVIDUALS',
       titleHtml: '<em>個人</em>のお客様',
       lede: 'かんたんな質問に答えるだけで、あなたにぴったりのインテリアスタイルとアイテムをご提案いたします。',
@@ -113,7 +98,7 @@ window.IL_DATA = {
       overlay: 'FOR YOU',
     },
     {
-      num: '05',
+      num: '04',
       audience: 'AI INTERIOR',
       titleHtml: '<em>AIインテリア提案</em>',
       lede: '部屋の写真を送るだけで、AIが家具を置いた完成イメージをLINEで無料でお届けします。',
@@ -289,7 +274,6 @@ window.IL_DATA = {
       label: 'サービス',
       href: 'index.html#services',
       children: [
-        { label: '工務店様・ハウスメーカー様', href: 'builders.html', eyebrow: 'FOR BUILDERS' },
         { label: '家具メーカー様',         href: 'furnituremakers.html', eyebrow: 'FOR FURNITUREMAKERS' },
         { label: '民泊業者様',             href: 'minpaku.html',         eyebrow: 'FOR VACATION RENTALS' },
         { label: '個人のお客様（カグラクのご紹介）',     href: 'kaguraku.html', eyebrow: 'FOR INDIVIDUALS' },

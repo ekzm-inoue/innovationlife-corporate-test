@@ -737,8 +737,7 @@ html, body { background: var(--il-cream); color: var(--il-ink); }
   gap: 24px;
 }
 @media (min-width: 640px)  { .il-targets { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
-@media (min-width: 1100px) { .il-targets { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
-@media (min-width: 1400px) { .il-targets { grid-template-columns: repeat(5, 1fr); gap: 20px; } }
+@media (min-width: 1100px) { .il-targets { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
 
 .il-target-card {
   position: relative;

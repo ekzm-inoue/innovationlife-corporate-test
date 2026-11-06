@@ -595,7 +595,6 @@ function ILFooter() {
             <div className="il-footer__col">
               <p className="il-footer__col-head">SERVICES</p>
               <ul>
-                <li><a href="builders.html">工務店様・ハウスメーカー様</a></li>
                 <li><a href="furnituremakers.html">家具メーカー様</a></li>
                 <li><a href="minpaku.html">民泊業者様</a></li>
                 <li><a href="kaguraku.html">個人のお客様（カグラクのご紹介）</a></li>
